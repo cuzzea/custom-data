@@ -1,36 +1,192 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "Post 1"
-    },
-    {
-      "id": 2,
-      "title": "Post 2"
-    },
-    {
-      "id": 3,
-      "title": "Post 3"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
-      "id": 3,
-      "body": "some comment",
-      "postId": 2
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "resources": [
+        {
+            "type": "account",
+            "resourcePath": "/account"
+        },
+        {
+            "type": "user",
+            "resourcePath": "/account/%s/user"
+        },
+        {
+            "type": "project",
+            "resourcePath": "/account/%s/user/%s/project"
+        },
+        {
+            "type": "entity",
+            "resourcePath": "/account/%s/user/%s/project/%s/entity"
+        }
+    ],
+    "account": [
+        {
+            "id": "1",
+            "resourceName": "/account/1",
+            "parents": [],
+            "children": [
+                {
+                    "type": "user",
+                    "resourceName": "/account/1/user/1"
+                }
+            ],
+            "name": "Intranet Inc."
+        },
+        {
+            "id": "2",
+            "resourceName": "/account/2",
+            "parents": [],
+            "children": [
+                {
+                    "type": "user",
+                    "resourceName": "/account/2/user/2"
+                },
+                {
+                    "type": "user",
+                    "resourceName": "/account/2/user/3"
+                }
+            ],
+            "name": "Corben A/S"
+        },
+        {
+            "id": "3",
+            "resourceName": "/account/3",
+            "parents": [],
+            "children": [
+                {
+                    "type": "user",
+                    "resourceName": "/account/3/user/4"
+                },
+                {
+                    "type": "user",
+                    "resourceName": "/account/3/user/5"
+                },
+                {
+                    "type": "user",
+                    "resourceName": "/account/3/user/6"
+                }
+            ],
+            "name": "Boulder SRL"
+        }
+    ],
+    "user": [
+        {
+            "id": "1",
+            "resourceName": "/account/1/user/1",
+            "parents": [
+                {
+                    "type": "account",
+                    "resourceName": "/account/1"
+                }
+            ],
+            "children": [],
+            "name": "Dan Mihail",
+            "username": "user1",
+            "password": "pass",
+            "accountId": "1"
+        },
+        {
+            "id": "2",
+            "resourceName": "/account/2/user/2",
+            "parents": [
+                {
+                    "type": "account",
+                    "resourceName": "/account/2"
+                }
+            ],
+            "children": [],
+            "name": "Ion Bogdea",
+            "username": "user2",
+            "password": "pass",
+            "accountId": "2"
+        },
+        {
+            "id": "3",
+            "resourceName": "/account/2/user/3",
+            "parents": [
+                {
+                    "type": "account",
+                    "resourceName": "/account/2"
+                }
+            ],
+            "children": [],
+            "name": "Manea Spranceana",
+            "username": "user3",
+            "password": "pass",
+            "accountId": "2"
+        },
+        {
+            "id": "4",
+            "resourceName": "/account/3/user/4",
+            "parents": [
+                {
+                    "type": "account",
+                    "resourceName": "/account/3"
+                }
+            ],
+            "children": [],
+            "name": "Alea Zghibor",
+            "username": "user4",
+            "password": "pass",
+            "accountId": "3"
+        },
+        {
+            "id": "5",
+            "resourceName": "/account/3/user/5",
+            "parents": [
+                {
+                    "type": "account",
+                    "resourceName": "/account/3"
+                }
+            ],
+            "children": [],
+            "name": "Bing Ani",
+            "username": "user5",
+            "password": "pass",
+            "accountId": "3"
+        },
+        {
+            "id": "6",
+            "resourceName": "/account/3/user/6",
+            "parents": [
+                {
+                    "type": "account",
+                    "resourceName": "/account/3"
+                }
+            ],
+            "children": [],
+            "name": "Carbin Dalar",
+            "username": "user6",
+            "password": "pass",
+            "accountId": "3"
+        }
+    ],
+    "project": [
+        {
+            "id": "1",
+            "resourceName": "/account/3/user/6/project/1",
+            "parents": [
+                {
+                    "type": "user",
+                    "resourceName": "/account/1/user/1"
+                }
+            ],
+            "children": [],
+            "name": "Test project 1",
+            "userId": 1
+        }
+    ],
+    "entity": [
+        {
+            "id": "1",
+            "resourceName": "/account/3/user/6/project/1/entity/1",
+            "parents": [
+                {
+                    "type": "project",
+                    "resourceName": "/account/1/user/1/project/1"
+                }
+            ],
+            "children": [],
+            "name": "Entity 1",
+            "projectId": 1
+        }
+    ]
 }
