@@ -109,7 +109,12 @@
                     "resourceName": "/account/1"
                 }
             ],
-            "children": [],
+            "children": [
+                {
+                    "resourceType": "project",
+                    "resourceName": "/account/1/user/1/project/1"
+                }
+            ],
             "name": "Dan Mihail",
             "username": "user1",
             "password": "pass",
