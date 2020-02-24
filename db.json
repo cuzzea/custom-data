@@ -2,19 +2,51 @@
     "resources": [
         {
             "type": "account",
-            "resourcePath": "/account"
+            "resourcePath": "/account",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "user",
-            "resourcePath": "/account/%s/user"
+            "resourcePath": "/account/%s/user",
+            "fields": [
+                {
+                    "name": "username",
+                    "type": "string"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "project",
-            "resourcePath": "/account/%s/user/%s/project"
+            "resourcePath": "/account/%s/user/%s/project",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
         },
         {
             "type": "entity",
-            "resourcePath": "/account/%s/user/%s/project/%s/entity"
+            "resourcePath": "/account/%s/user/%s/project/%s/entity",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                }
+            ]
         }
     ],
     "account": [
