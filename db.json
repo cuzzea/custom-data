@@ -201,7 +201,12 @@
                     "resourceName": "/account/1/user/1"
                 }
             ],
-            "children": [],
+            "children": [
+                {
+                    "resourceType": "entity",
+                    "resourceName": "/account/3/user/6/project/1/entity/1"
+                }
+            ],
             "name": "Test project 1",
             "userId": 1
         }
